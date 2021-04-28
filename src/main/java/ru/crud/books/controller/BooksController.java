@@ -35,7 +35,7 @@ public class BooksController {
 		model.addAttribute("book", new Books());
 		return "new";
 	}
-	@PostMapping()
+	@PostMapping("/add")
 	public String addBook(@ModelAttribute("books") Books books){
 		booksDAO.addBook(books);
 		return "redirect:/books";
